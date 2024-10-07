@@ -10,3 +10,19 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.charmed-navbar {
+
+  background-color: white;
+  padding: 5px 20px;
+
+  img {
+    width: 60px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    justify-content: space-around;
+  }
+}
