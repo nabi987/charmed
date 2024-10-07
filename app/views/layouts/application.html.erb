@@ -18,8 +18,10 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render "shared/flashes" %>
     <%= yield %>
+    <% if user_signed_in? %>
+      <h2>Welcome <%= current_user.email %></h2>
+    <% end %>
   </body>
 </html>
