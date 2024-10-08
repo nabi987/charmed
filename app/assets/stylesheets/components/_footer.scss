@@ -1,9 +1,34 @@
+
+
+
 .footer {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  position:absolute;
 
-  background-color: white;
-  padding: 5px 20px;
+  bottom:0px;
+
+  width: 100%;
+
+  align-items: center;
+  background-color: black;
+
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-button {
+  color: white;
   text-decoration: none;
-  color: black;
-  justify-content: space-around;
+  padding: 10px 15px;
+  background-color: #555;
+  border-radius: 5px;
+}
 
+.footer-button:hover {
+  background-color: #777;
 }
