@@ -1,1 +1,10 @@
+
 <h1>Necklaces</h1>
+
+<div class="card-trip">
+<% @necklaces.each do |necklace| %>
+    <%= link_to necklace_path(necklace) do %>
+        <h2><%= necklace.name  %></h2>
+      </div>
+    <% end %>
+  <% end %>
