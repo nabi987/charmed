@@ -1,0 +1,23 @@
+.banner {
+  padding-top: 350px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  background-image: url('banner2.png');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.text-container {
+
+  padding: 15px;
+  background-color: burlywood;
+  width: 40%;
+}
+
+.banner h1 {
+  font-family: 'Times New Roman', Times, serif;
+}
