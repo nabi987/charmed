@@ -3,6 +3,10 @@ class NecklacesController < ApplicationController
     @necklaces = Necklace.all
   end
 
+  def show
+    @necklace = Necklace.find(params[:id])
+  end
+
   def new
     @necklace = Necklace.new
   end
