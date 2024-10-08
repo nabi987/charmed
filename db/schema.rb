@@ -39,4 +39,5 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_07_163218) do
   end
 
   add_foreign_key "necklaces", "users"
+
 end
