@@ -24,6 +24,6 @@ class NecklacesController < ApplicationController
   private
 
   def necklace_params
-    params.require(:necklace).permit(:name, :price, :description, :gemstone, :material, :image_url)
+    params.require(:necklace).permit(:name, :price, :description, :gemstone, :material, :photo)
   end
 end
