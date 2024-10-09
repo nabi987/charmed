@@ -8,13 +8,10 @@
     <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="<%= @necklace.image_url %>" class="d-block w-100" alt="Necklace">
+          <img src="<%= cl_image_path(@necklace.photo.key) %>" class="d-block w-100" alt="Necklace">
         </div>
         <div class="carousel-item">
-          <img src="<%= @necklace.image_url %>" class="d-block w-100" alt="Necklace">
-        </div>
-        <div class="carousel-item">
-          <img src="<%= @necklace.image_url %>" class="d-block w-100" alt="Necklace">
+          <img src="<%= cl_image_path(@necklace.photo.key) %>" class="d-block w-100" alt="Necklace">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">

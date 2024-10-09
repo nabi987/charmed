@@ -10,7 +10,7 @@
         <p>Gemstone: <%= necklace.gemstone  %></p>
         <p>Price: £<%= necklace.price  %></p>
       <% end %>
-        <%= image_tag necklace.image_url %>
+        <%= cl_image_tag necklace.photo.key %>
     </div>
   <% end %>
 </div>
