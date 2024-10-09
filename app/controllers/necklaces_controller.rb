@@ -4,8 +4,7 @@ class NecklacesController < ApplicationController
   end
 
   def show
-    @necklace
-    #= Necklace.find(params[:id])
+    @necklace = Necklace.find(params[:id])
   end
 
   def new
