@@ -13,6 +13,7 @@ class NecklacesController < ApplicationController
 
   def create
     @necklace = Necklace.new(necklace_params)
+    @necklace.user = current_user
     if @necklace.save
       redirect_to necklace_path(@necklace)
     else

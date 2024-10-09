@@ -1,6 +1,6 @@
-
+<%= render 'shared/navbar' %>
 <div class ="listing-form">
-    <h1>New listing</h1>
+    <h1>Rent your necklace</h1>
   <hr>
   <%= simple_form_for(@necklace) do |f| %>
       <%= f.input :name%>
@@ -13,6 +13,7 @@
       <hr>
       <%= f.input :photo, as: :file %>
       <hr>
-      <%= f.submit :Create %>
+      <%= f.submit :Rent %>
   <% end %>
 </div>
+<%= render 'shared/footer' %>
