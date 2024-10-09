@@ -19,6 +19,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
+  border: 1px solid #eaba70;
 }
 
 .necklace-info-card {
@@ -29,6 +30,7 @@ body {
   border-color: #eaba70;
   border: #eaba70;
   border-width: 2cap;
+  padding-top: 20px;
 }
 
 // Smallest device
