@@ -15,13 +15,6 @@ body {
   }
 }
 
-.carousel-item {
-  max-height: 500px;
-  img {
-    object-fit: cover;
-  }
-}
-
 .necklace-info-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
