@@ -4,7 +4,8 @@ class NecklacesController < ApplicationController
   end
 
   def show
-    @necklace = Necklace.find(params[:id])
+    @necklace
+    #= Necklace.find(params[:id])
   end
 
   def new
@@ -23,6 +24,6 @@ class NecklacesController < ApplicationController
   private
 
   def necklace_params
-    params.require(:necklace).permit(:name, :price, :description, :gemstone, :material)
+    params.require(:necklace).permit(:name, :price, :description, :gemstone, :material, :image_url)
   end
 end

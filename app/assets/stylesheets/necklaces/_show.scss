@@ -1,0 +1,18 @@
+body {
+  background-color: black
+}
+
+.container {
+  margin: 15px auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card {
+  background-color: black;
+  color: white;
+}
