@@ -2,18 +2,14 @@
 
 
 .footer {
-  margin-bottom: 10px;
+  position: fixed;
+  bottom: 0;
   display: flex;
   justify-content: center;
-  position:absolute;
-
   bottom:0px;
-
   width: 100%;
-
   align-items: center;
   background-color: black;
-
 }
 
 .footer-buttons {
