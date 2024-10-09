@@ -5,9 +5,6 @@
     <div class="card-trip">
       <%= link_to necklace_path(necklace) do %>
         <h2><%= necklace.name  %></h2>
-        <p>Description: <%= necklace.description  %></p>
-        <p>Material: <%= necklace.material  %></p>
-        <p>Gemstone: <%= necklace.gemstone  %></p>
         <p>Price: £<%= necklace.price  %></p>
       <% end %>
         <%= cl_image_tag necklace.photo.key %>
