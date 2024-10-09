@@ -8,13 +8,14 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 20px;
-  max-height: 300px;
+  max-height: 600px;
   padding: 10px;
 
 }
 
 .card-trip > img {
-
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
 }
 
