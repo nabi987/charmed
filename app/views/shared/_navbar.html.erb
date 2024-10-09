@@ -3,8 +3,8 @@
       <%= link_to image_tag('logo.png', alt: 'Logo'), root_path, class: 'logo-button' %>
     </div>
     <div class="nav-buttons">
-      <%= link_to 'Rent', '#', class: 'nav-button' %>
-      <%= link_to 'Lend', '#', class: 'nav-button' %>
+      <%= link_to 'Rent', necklaces_path, class: 'nav-button' %>
+      <%= link_to 'Lend', new_necklace_path, class: 'nav-button' %>
       <%= link_to 'Login', user_session_path, class: 'nav-button' %>
     </div>
   </nav>
