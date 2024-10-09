@@ -1,6 +1,42 @@
 <%= render "shared/navbar" %>
+<div class="container">
+  <div class="back-link">
+    <%= link_to "Back to Necklaces", necklaces_path %>
+  </div>
 
+  <div class="necklace-info-cards">
+    <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="<%= @necklace.image_url %>" class="d-block w-100" alt="Necklace">
+        </div>
+        <div class="carousel-item">
+          <img src="<%= @necklace.image_url %>" class="d-block w-100" alt="Necklace">
+        </div>
+        <div class="carousel-item">
+          <img src="<%= @necklace.image_url %>" class="d-block w-100" alt="Necklace">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-
-
+    <div class="necklace-info-card">
+      <h2><%= @necklace.name %></h2>
+      <h5>Daily rental rate: £<%= @necklace.price %></h5>
+      <h6>Gemstone: <%= @necklace.gemstone.capitalize %></h6>
+      <h6>Material: <%= @necklace.material.capitalize %></h6>
+      <p><%= @necklace.description %></p>
+      <div class="btn btn-light">
+        Rent now
+      </div>
+    </div>
+  </div>
+</div>
 <%= render "shared/footer" %>
