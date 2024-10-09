@@ -1,5 +1,5 @@
 <%= render "shared/navbar" %>
-<div class="container mt-3">
+<div class="user-container mt-3">
 <h2>Sign Up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
@@ -8,6 +8,14 @@
 
   <div class="form-inputs">
     <div class="form-group">
+      <%= f.label :username, "Username" %>
+      <%= f.input :username,
+                  required: true,
+                  label: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "username" }%>
+    </div>
+
       <%= f.label :email, "Email" %>
       <%= f.input :email,
                   required: true,
@@ -32,15 +40,17 @@
                     label:  false,
                     input_html: { autocomplete: "new-password" } %>
       </div>
-  </div>
+
 
   <div class="form-actions">
     <%= f.button :submit, "Sign up", class:"btn btn-success btn-sml btn-block" %>
   </div>
+  <%= render "devise/shared/links" %>
+</div>
 <% end %>
 
 
 
-<%= render "devise/shared/links" %>
+
 </div>
 <%= render "shared/footer" %>
