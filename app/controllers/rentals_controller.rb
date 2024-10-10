@@ -5,6 +5,7 @@ class RentalsController < ApplicationController
 
   def new
     @rental = Rental.new
+    @necklace = Necklace.find(params[:necklace_id])
   end
 
   def create
