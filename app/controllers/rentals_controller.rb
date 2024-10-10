@@ -1,6 +1,7 @@
 class RentalsController < ApplicationController
   def index
-    @rentals = Rental.all
+    @rentals = current_user.rentals
+    @listed = current_user.necklaces
   end
 
   def new

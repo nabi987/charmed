@@ -1,40 +1,39 @@
-
 <div class="container mt-3">
-  <h1>My rentals</h1>
-  <%= link_to "Rent new necklace",  "#", class: "btn btn-warning"%>
-
+  <h1> <%= current_user.username%>'s Account</h1>
 
   <div class="my-rental-items">
+    <h4> I am lending</h4>
     <div class="card-container">
+      <% if current_user.necklaces.any? %>
+      <% current_user.necklaces.each do |necklace| %>
       <div class="card">
-        <%= image_tag "placeholderimg.jpg", class: "card-img" %>
+        <%= cl_image_tag necklace.photo.key, class: "card-img" %>
         <div class="card-body">
-         <p>Placeholder 1</p>
-         <p>name</p>
-         <p>description</p>
-         <p>gem & material</p>
+         <p><%= necklace.name %>
         </div>
       </div>
+      <% end %>
+    <% else %>
+      <h6>You currently have no necklaces available to rent</h6>
+      <%= link_to "Lend a necklace", new_necklace_path %>
+    <% end %>
+    </div>
 
+    <h4> I am renting</h4>
+    <div class="card-container">
+      <% if current_user.rentals.any? %>
+      <% current_user.rentals.each do |rental| %>
       <div class="card">
-        <%= image_tag "placeholderimg.jpg", class: "card-img" %>
+        <%= cl_image_tag necklace.photo.key, class: "card-img" %>
         <div class="card-body">
-         <p>Placeholder 2</p>
-         <p>name</p>
-         <p>description</p>
-         <p>gem & material</p>
+         <p><%= necklace.name %>
         </div>
       </div>
-
-      <div class="card">
-        <%= image_tag "placeholderimg.jpg", class: "card-img" %>
-        <div class="card-body">
-         <p>Placeholder 3</p>
-         <p>name</p>
-         <p>description</p>
-         <p>gem & material</p>
-        </div>
-      </div>
+       <% end %>
+    <% else %>
+      <h6>You currently are renting no necklaces</h6>
+      <%= link_to "Rent a necklace", necklaces_path %>
+    <% end %>
     </div>
   </div>
 </div>

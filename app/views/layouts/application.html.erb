@@ -16,8 +16,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
 
 
 
@@ -28,9 +30,7 @@
     <%= render "shared/flashes" %>
 
     <%= yield %>
-    <% if user_signed_in? %>
-      <h2>Welcome <%= current_user.email %></h2>
-    <% end %>
+
     <%= render "shared/footer" %>
   </body>
 </html>

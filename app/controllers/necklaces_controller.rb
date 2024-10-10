@@ -1,4 +1,6 @@
 class NecklacesController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
+
   def index
     @necklaces = Necklace.all
   end
@@ -19,6 +21,16 @@ class NecklacesController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit
+    @necklace = Necklace.find(params[:id])
+  end
+
+  def update
+    @necklace = Necklace.find(params[:id])
+    @necklace.update(necklace_params)
+    redirect_to necklace_path(@necklace)
   end
 
   private
