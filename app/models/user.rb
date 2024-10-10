@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :necklaces
+  has_many :necklaces, dependent: :destroy
   has_many :rentals
   validates :username, presence: true
   # Include default devise modules. Others available are:
