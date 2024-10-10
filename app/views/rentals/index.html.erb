@@ -7,6 +7,7 @@
       <% if current_user.necklaces.any? %>
       <% current_user.necklaces.each do |necklace| %>
       <div class="card">
+        <%= link_to "Delete", necklace_path(necklace), data:{turbo_method: :delete, turbo_confirm: "Are you sure you want to delete?"} %>
         <%= cl_image_tag necklace.photo.key, class: "card-img" %>
         <div class="card-body">
          <p><%= necklace.name %>
@@ -37,5 +38,3 @@
     </div>
   </div>
 </div>
-<%= link_to "Delete", necklace_path, data:{turbo_method: :delete, turbo_confirm: "Are you sure to delete?"} do %>
-<% end %>

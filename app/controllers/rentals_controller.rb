@@ -13,12 +13,6 @@ class RentalsController < ApplicationController
     @rental.save
   end
 
-  def destroy
-    @rental = Rental.find(params[:id])
-    @rental.destroy
-    redirect_to necklace_path, status: :see_others
-  end
-
   private
 
   def rental_params

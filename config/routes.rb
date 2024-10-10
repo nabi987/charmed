@@ -17,12 +17,5 @@ Rails.application.routes.draw do
   resources :necklaces do
     resources :rentals, only: [:new, :create]
   end
-<<<<<<< HEAD
   resources :rentals, only: [:index, :destroy]
-
-  resources :necklaces
-
-=======
-  resources :rentals, only: [:index]
->>>>>>> be23d2e3a44f207909794d3f0b83cfa3b64809a3
 end
