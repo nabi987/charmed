@@ -9,8 +9,13 @@ class RentalsController < ApplicationController
   end
 
   def create
-    @rental = Rental.new(rental_params)
+    @rental = Rental.new
+
+    @necklace = Necklace.find(params[:necklace_id])
+    @rental.necklace = @necklace
+    @rental.user = current_user
     @rental.save
+    # redirect to
   end
 
   private

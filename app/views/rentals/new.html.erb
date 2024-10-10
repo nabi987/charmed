@@ -1,9 +1,26 @@
 
 <div class ="listing-form">
     <h1>Rent your necklace</h1>
+
+      <div data-controller="datepicker" data-datepicker-price="<%= @necklace.price %>">
+        <div>
+        <label for="rental-dates">Select rental dates:</label>
+        <input id="rental-dates" class="form-control" type="text" placeholder="Select a date range">
+        </div>
+
+        <div>
+          Days selected: <span id="days-selected" data-datepicker-target="totalDays">0</span>
+        </div>
+
+        <div>
+         Total price: <span id="total-price" data-datepicker-target="totalPrice">£0</span>
+        </div>
+      </div>
+
   <hr>
   <%= simple_form_for [@necklace, @rental] do |f| %>
 
-      <%= f.submit :Rent %>
+      <%= f.submit "Rent"
+       %>
   <% end %>
 </div>
