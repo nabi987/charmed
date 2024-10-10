@@ -1,4 +1,6 @@
 class NecklacesController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
+
   def index
     @necklaces = Necklace.all
   end
