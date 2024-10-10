@@ -23,6 +23,12 @@ class NecklacesController < ApplicationController
     end
   end
 
+  def destroy
+    @necklace = Necklace.find(params[:id])
+    @necklace.destroy
+    redirect_to rentals_path, status: :see_other
+  end
+
   def edit
     @necklace = Necklace.find(params[:id])
   end
