@@ -3,8 +3,8 @@
     <h1>Rent your necklace</h1>
   <hr>
   <%= simple_form_for(@necklace) do |f| %>
-      <%= f.input :name%>
-      <%= f.input :price%>
+      <%= f.input :name %>
+      <%= f.input :price, label: "Rent price per day" %>
       <%= f.input :description %>
       <%= f.label :gemstone %>
       <%= f.select :gemstone , options_for_select([["Diamond"],["Ruby"],["emerald"],["pearl"], ["Sapphire"], ["Other"]])%>
