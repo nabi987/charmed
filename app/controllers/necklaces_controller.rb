@@ -23,6 +23,16 @@ class NecklacesController < ApplicationController
     end
   end
 
+  def edit
+    @necklace = Necklace.find(params[:id])
+  end
+
+  def update
+    @necklace = Necklace.find(params[:id])
+    @necklace.update(necklace_params)
+    redirect_to necklace_path(@necklace)
+  end
+
   private
 
   def necklace_params
