@@ -11,7 +11,6 @@ class RentalsController < ApplicationController
 
   def create
     @rental = Rental.create(rental_params)
-
     @necklace = Necklace.find(params[:necklace_id])
     @rental.necklace = @necklace
     @rental.user = current_user
@@ -19,9 +18,9 @@ class RentalsController < ApplicationController
     if @rental.save
       redirect_to rentals_path
     else
-      render "new", status: :unprocessable_entity
+
+      render :new, status: :unprocessable_entity
     end
-    # redirect to
   end
 
   private
