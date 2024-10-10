@@ -6,16 +6,27 @@ class RentalsController < ApplicationController
 
   def new
     @rental = Rental.new
+    @necklace = Necklace.find(params[:necklace_id])
   end
 
   def create
-    @rental = Rental.new(rental_params)
-    @rental.save
+    @rental = Rental.create(rental_params)
+
+    @necklace = Necklace.find(params[:necklace_id])
+    @rental.necklace = @necklace
+    @rental.user = current_user
+
+    if @rental.save
+      redirect_to rentals_path
+    else
+      render "new", status: :unprocessable_entity
+    end
+    # redirect to
   end
 
   private
 
   def rental_params
-    params.require(:rental).permit(:user_id, :necklace_id)
+    params.require(:rental).permit(:start_date, :end_date)
   end
 end
