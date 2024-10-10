@@ -1,0 +1,23 @@
+ <div class="container">
+  <div class="back-link">
+    <%= link_to "Back to #{@necklace.name}", necklace_path(@necklace) %>
+  </div>
+
+  <div class ="listing-form">
+      <h1>Edit <%= @necklace.name %></h1>
+    <hr>
+    <%= simple_form_for(@necklace) do |f| %>
+        <%= f.input :name%>
+        <%= f.input :price%>
+        <%= f.input :description %>
+        <%= f.label :gemstone %>
+        <%= f.select :gemstone , options_for_select([["Diamond"],["Ruby"],["emerald"],["pearl"], ["Sapphire"], ["Other"]])%>
+        <%= f.label :material %>
+        <%= f.select :material , options_for_select([["Gold"],["Silver"],["Platinum"],["Titianium"], ["Stainless Steal"], ["Other"]])%>
+        <hr>
+        <%= f.input :photo, as: :file %>
+        <hr>
+        <%= f.submit :Update %>
+    <% end %>
+  </div>
+</div>
