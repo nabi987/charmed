@@ -30,6 +30,22 @@
       <h6>Gemstone: <%= @necklace.gemstone.capitalize %></h6>
       <h6>Material: <%= @necklace.material.capitalize %></h6>
       <p><%= @necklace.description %></p>
+
+      <div data-controller="datepicker" data-datepicker-price="<%= @necklace.price %>">
+        <div>
+        <label for="rental-dates">Select rental dates:</label>
+        <input id="rental-dates" class="form-control" type="text" placeholder="Select a date range">
+        </div>
+
+        <div>
+          Days selected: <span id="days-selected" data-datepicker-target="totalDays">0</span>
+        </div>
+
+        <div>
+         Total price: <span id="total-price" data-datepicker-target="totalPrice">£0</span>
+        </div>
+      </div>
+
       <div class="btn btn-light">
         Rent now
       </div>
