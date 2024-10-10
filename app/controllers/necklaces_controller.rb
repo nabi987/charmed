@@ -3,6 +3,10 @@ class NecklacesController < ApplicationController
 
   def index
     @necklaces = Necklace.all
+    if params[:query].present?
+      sql_subquery = "name ILIKE :query OR gemstone ILIKE :query OR material ILIKE :query"
+      @necklaces = @necklaces.where(sql_subquery, query: "%#{params[:query]}%")
+    end
   end
 
   def show

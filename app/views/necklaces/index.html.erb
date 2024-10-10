@@ -1,12 +1,25 @@
-<div class="title"><h1>Necklaces</h1></div>
-<div class="cards">
-  <% @necklaces.each do |necklace| %>
-    <div class="card-trip">
-      <%= link_to necklace_path(necklace) do %>
-        <h2><%= necklace.name  %></h2>
-        <p>Price: £<%= necklace.price  %></p>
-      <% end %>
-        <%= cl_image_tag necklace.photo.key %>
-    </div>
-  <% end %>
+<div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: necklaces_path, method: :get, class:
+     "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Type a keyword"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
+  <div class="title"><h1>Necklaces</h1></div>
+  <div class="cards">
+    <% @necklaces.each do |necklace| %>
+      <div class="card-trip">
+        <%= link_to necklace_path(necklace) do %>
+          <h2><%= necklace.name  %></h2>
+          <p>Price: £<%= necklace.price  %></p>
+        <% end %>
+          <%= cl_image_tag necklace.photo.key %>
+      </div>
+    <% end %>
+  </div>
