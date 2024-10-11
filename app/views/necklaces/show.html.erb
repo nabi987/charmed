@@ -9,8 +9,8 @@
 
     <div class="necklace-info-card">
       <h2><%= @necklace.name %></h2>
-      <h6>Gemstone: <%= @necklace.gemstone.capitalize %></h6>
-      <h6>Material: <%= @necklace.material.capitalize %></h6>
+      <h6><i class="fa-regular fa-gem"></i> <%= @necklace.gemstone.capitalize %></h6>
+      <h6><i class="fa-solid fa-link"></i> <%= @necklace.material.capitalize %></h6>
       <p><%= @necklace.description %></p>
 
       <%= simple_form_for [@necklace, @rental], data: {controller: "datepicker"} do |f| %>
