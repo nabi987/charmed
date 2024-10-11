@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const submitForm = document.getElementById('toggle-form');
   const sumbitOrderBox = document.querySelector(".order-confirm-box");
 
- submitForm.addEventListener('click', function() {
+ submitForm.addEventListener('submit', function() {
     if (sumbitOrderBox.style.display === 'none' || sumbitOrderBox.style.display === '') {
       sumbitOrderBox.style.display = 'block';
       submitForm.style.display = 'none';
