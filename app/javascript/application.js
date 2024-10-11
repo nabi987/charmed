@@ -6,13 +6,28 @@ import "bootstrap"
 
 document.addEventListener('DOMContentLoaded', function() {
   const formToggleBtn = document.getElementById('form-toggle-btn');
-  const listingForm = document.querySelector('.listing-form');
+  const listingForm = document.getElementById('toggle-form');
 
   formToggleBtn.addEventListener('click', function() {
     if (listingForm.style.display === 'none' || listingForm.style.display === '') {
       listingForm.style.display = 'block';
     } else {
       listingForm.style.display = 'none';
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const submitForm = document.getElementById('toggle-form');
+  const sumbitOrderBox = document.querySelector(".order-confirm-box");
+
+ submitForm.addEventListener('click', function() {
+    if (sumbitOrderBox.style.display === 'none' || sumbitOrderBox.style.display === '') {
+      sumbitOrderBox.style.display = 'block';
+      submitForm.style.display = 'none';
+    } else {
+      submitForm.style.display = 'block';
+      sumbitOrderBox.style.display = 'none';
     }
   });
 });
