@@ -1,5 +1,9 @@
 // Speci!fic CSS for your home
 
+.content {
+  min-height: calc(100vh - 170px);
+}
+
 .banner {
   display: flex;
   flex-direction: column;
