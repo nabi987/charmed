@@ -1,15 +1,14 @@
 
-
-
 .footer {
   position: fixed;
   bottom: 0;
-  display: flex;
-  justify-content: center;
-  bottom:0px;
   width: 100%;
-  align-items: center;
   background-color: black;
+  font-family: "Cinzel", serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px 20px;
 }
 
 .footer-buttons {
@@ -26,5 +25,22 @@
 }
 
 .footer-button:hover {
-  background-color: #777;
+  background-color: #e1c299;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer-links a {
+  color: white;
+  opacity: 0.75;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.footer-links a:hover{
+  opacity:1;
 }

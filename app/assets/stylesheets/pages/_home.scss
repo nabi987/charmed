@@ -3,16 +3,22 @@
 .banner {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-  background-image: url('banner2.png');
+  background-image:
+      linear-gradient(
+      rgba(235, 223, 200, 0.1),
+      rgba(235, 223, 200, 0.3),
+      ),
+      url('banner2.png');
   background-size: cover;
   background-position: center;
   height: 600px;
   width: 100%;
   background-repeat: no-repeat;
   position: relative;
-  padding-left: 30px;
+  padding-top: 8px;
+
 }
 
 
@@ -21,7 +27,7 @@
   font-optical-sizing: auto;
   font-weight: bold;
   color: white;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7), 0px 0px 10px rgba(255, 255, 255, 0.8);
   padding: 15px;
   font-size: 50px;
   margin: 0;
@@ -29,9 +35,32 @@
 
 .banner h2{
   color: black;
+  font-weight: bold;
   font-family: "Cinzel", serif;
-  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 5px rgb(247, 247, 247),2px 2px 15px rgba(0, 0, 0, 0.7);
   font-size: 40px;
   margin: 10px 0;
   padding: 0px;
 }
+
+.banner a{
+    display: inline-block;
+    padding: 5px 10px;
+    font-family: "Cinzel", serif;
+    font-size: 20px;
+    margin-left: 10px;
+    color: white;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7), 0px 0px 10px rgba(255, 255, 255, 0.8);
+    background-color: #BC424E;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+  .banner a:hover{
+    color:white;
+    background-color:#a03038 ;
+    font-weight: bold;
+  }
