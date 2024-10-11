@@ -29,10 +29,11 @@
         </div>
       </div>
 
-      <div class="btn btn-light">
-        <%= link_to "Rent now", new_necklace_rental_path(@necklace) %>
+      <div class="btn btn-light" id="form-toggle-btn">
+        <%= "Rent now" %>
       </div>
-      <div class="listing-form">
+
+      <div class="listing-form" id="toggle-form">
         <h3>Delivery Address</h3>
         <div class="form-row">
           <div class="input-row mt-2">
@@ -86,7 +87,14 @@
           </div>
         </div>
         <hr>
-        <h3 class= "btn btn-secondary btn-sm">Submit</h3>
+        <div class="button-container">
+          <h3 class= "btn btn-secondary btn-sm">Submit</h3>
+        </div>
+      </div>
+
+      <div class="order-confirm-box">
+        <h4>Thank you for your order</h4>
+        <h5>It will be with you shortly </h5>
       </div>
 
     </div>
