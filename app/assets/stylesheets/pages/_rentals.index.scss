@@ -51,6 +51,7 @@ h1{
 }
 
 .card-container{
+  color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -64,5 +65,6 @@ h1{
 }
 
 .card-body{
+  color: white;
   padding:20px;
 }

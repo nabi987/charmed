@@ -1,6 +1,6 @@
 <div class="container mt-3">
   <h1> <%= current_user.username%>'s Account</h1>
-
+  <hr>
   <div class="my-rental-items">
     <h4> I am lending</h4>
     <div class="card-container">
@@ -12,7 +12,7 @@
         <% end %>
         <%= cl_image_tag necklace.photo.key, class: "card-img" %>
         <div class="card-body">
-          <p class = "rent-card"><%= necklace.name.truncate(26) %>
+          <p class = "rent-card"><%= necklace.name.truncate(23) %>
           <%= link_to edit_necklace_path(necklace) do %>
             <i class="fa-solid fa-pen-to-square" style="color: #eaba72;"></i>
           <% end %>
@@ -24,7 +24,7 @@
       <%= link_to "Lend a necklace", new_necklace_path %>
     <% end %>
     </div>
-
+    <hr>
     <h4> I am renting</h4>
     <div class="card-container">
       <% if current_user.rentals.any? %>
@@ -32,7 +32,9 @@
       <div class="card">
         <%= cl_image_tag rental.necklace.photo.key, class: "card-img" %>
         <div class="card-body">
-         <p><%= rental.necklace.name %>
+         <p><%= rental.necklace.name.truncate(23) %>
+         <p>Start date: <%= rental.start_date %></p>
+         <p>End date: <%= rental.end_date %></p>
         </div>
       </div>
        <% end %>
