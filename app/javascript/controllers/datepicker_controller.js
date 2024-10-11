@@ -16,10 +16,10 @@ export default class extends Controller {
       onChange: (selectedDates) => {
         if (selectedDates.length === 2) {
 
-          const startDate = selectedDates[0];
-          const endDate = selectedDates[1];
+          const firstDate = selectedDates[0];
+          const secondDate = selectedDates[1];
 
-          const timeDiff = endDate - startDate;
+          const timeDiff = secondDate - firstDate;
           const dayDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
 
           this.totalDaysTarget.innerHTML = dayDiff;

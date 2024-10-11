@@ -49,6 +49,12 @@ body {
 
 
 
+
+.listing-form {
+  display: none;
+}
+
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .necklace-info-cards {
