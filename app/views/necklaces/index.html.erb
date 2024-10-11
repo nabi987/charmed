@@ -1,3 +1,4 @@
+
 <div class="row justify-content-center">
   <div class="col-sm-8 my-3">
     <%= form_with url: necklaces_path, method: :get, class:
@@ -14,12 +15,13 @@
   <div class="title"><h1>Necklaces</h1></div>
   <div class="cards">
     <% @necklaces.each do |necklace| %>
-      <div class="card-trip">
-        <%= link_to necklace_path(necklace) do %>
-          <h2><%= necklace.name  %></h2>
-          <p>Price: £<%= necklace.price  %></p>
-        <% end %>
-          <%= cl_image_tag necklace.photo.key %>
-      </div>
+        <div class="card-trip">
+          <%= link_to necklace_path(necklace) do %>
+            <h2><%= necklace.name  %></h2>
+            <p>Price: £<%= necklace.price  %></p>
+             <hr class = "line">
+            <%= cl_image_tag necklace.photo.key %>
+          <% end %>
+        </div>
     <% end %>
   </div>
