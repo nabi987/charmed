@@ -2,7 +2,7 @@ body {
   background-color: black
 }
 
-.necklace-info-container {
+.container {
   margin: 15px auto;
   background-color: black;
   height: 100%;
@@ -56,13 +56,13 @@ body {
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .necklace-info-cards {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .necklace-info-cards {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
