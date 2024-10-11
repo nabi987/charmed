@@ -1,7 +1,24 @@
 body {
-  background-color: black
+  background-color: black;
 }
 
+.order-confirm-box {
+  background-color: #DEB786;
+  color:white;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 8px;
+  font-family: "Cinzel", serif;
+  margin-top: 30px;
+}
+
+.button-container{
+  color:white;
+  display: flex;
+  justify-content: center;
+
+}
 .necklace-info-container {
   margin: 15px auto;
   background-color: black;
@@ -31,6 +48,7 @@ body {
   border-width: 2cap;
   padding-top: 20px;
 }
+
 
 .listing-form {
   display: none;
