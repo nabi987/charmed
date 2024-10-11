@@ -14,7 +14,7 @@
       <p><%= @necklace.description %></p>
 
       <%= simple_form_for [@necklace, @rental], data: {controller: "datepicker"} do |f| %>
-      <h5>Daily rental rate: £</h5><span data-datepicker-target="price"><%= @necklace.price %></span>
+      <h5>Daily rental rate: £<span data-datepicker-target="price"><%= @necklace.price %></span></h5>
         <%= f.input :start_date, as: :string, input_html:{data: {datepicker_target: "startDate"}} %>
         <%= f.input :end_date, as: :string, input_html:{data: {datepicker_target: "endDate", action: "change->datepicker#calculatePrice"}} %>
         <div>
@@ -23,16 +23,12 @@
         <div>
           Total price: <span id="total-price" data-datepicker-target="totalPrice">£0</span>
         </div>
-        <%= f.submit %>
+        <%= f.submit "Rent now" %>
       <% end %>
 
     </div>
 
   </div>
-
-      <div class="btn btn-light" id="form-toggle-btn">
-        <%= "Rent now" %>
-      </div>
 
       <div class="listing-form" id="toggle-form">
         <h3>Delivery Address</h3>
