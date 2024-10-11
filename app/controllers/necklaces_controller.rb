@@ -11,6 +11,7 @@ class NecklacesController < ApplicationController
 
   def show
     @necklace = Necklace.find(params[:id])
+    @rental = Rental.new
   end
 
   def new

@@ -1,50 +1,34 @@
 
-<div class="necklace-info-container">
+<div class="container">
   <div class="back-link">
     <%= link_to "Back to Necklaces", necklaces_path %>
   </div>
 
   <div class="necklace-info-cards">
-    <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <%= cl_image_tag @necklace.photo.key, class:"d-block w-100", alt:"Necklace" %>
-        </div>
-        <div class="carousel-item">
-          <%= cl_image_tag @necklace.photo.key, class:"d-block w-100", alt:"Necklace" %>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    <%= cl_image_tag @necklace.photo.key, class:"d-block w-100", alt:"Necklace" %>
 
     <div class="necklace-info-card">
       <h2><%= @necklace.name %></h2>
-      <h5>Daily rental rate: £<%= @necklace.price %></h5>
       <h6>Gemstone: <%= @necklace.gemstone.capitalize %></h6>
       <h6>Material: <%= @necklace.material.capitalize %></h6>
       <p><%= @necklace.description %></p>
 
-      <div data-controller="datepicker" data-datepicker-price="<%= @necklace.price %>">
-        <div>
-        <label for="rental-dates">Select rental dates:</label>
-        <input id="rental-dates" class="form-control" type="text" placeholder="Select a date range">
-        </div>
-
+      <%= simple_form_for [@necklace, @rental], data: {controller: "datepicker"} do |f| %>
+      <h5>Daily rental rate: £</h5><span data-datepicker-target="price"><%= @necklace.price %></span>
+        <%= f.input :start_date, as: :string, input_html:{data: {datepicker_target: "startDate"}} %>
+        <%= f.input :end_date, as: :string, input_html:{data: {datepicker_target: "endDate", action: "change->datepicker#calculatePrice"}} %>
         <div>
           Days selected: <span id="days-selected" data-datepicker-target="totalDays">0</span>
         </div>
-
         <div>
-         Total price: <span id="total-price" data-datepicker-target="totalPrice">£0</span>
+          Total price: <span id="total-price" data-datepicker-target="totalPrice">£0</span>
         </div>
-      </div>
+        <%= f.submit %>
+      <% end %>
+
+    </div>
+
+  </div>
 
       <div class="btn btn-light" id="form-toggle-btn">
         <%= "Rent now" %>
