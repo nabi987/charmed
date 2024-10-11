@@ -1,5 +1,17 @@
 body {
-  background-color: black
+  background-color: black;
+
+}
+
+.order-confirm-box {
+
+  background-color: #DEB786;
+  color:white;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 8px;
+  font-family: "Cinzel", serif;
 }
 
 .necklace-info-container {
@@ -31,6 +43,11 @@ body {
   border-width: 2cap;
   padding-top: 20px;
 }
+
+
+
+
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
