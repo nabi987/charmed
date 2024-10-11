@@ -10,7 +10,7 @@ class RentalsController < ApplicationController
   end
 
   def create
-    @rental = Rental.create(rental_params)
+    @rental = Rental.new(rental_params)
     @necklace = Necklace.find(params[:necklace_id])
     @rental.necklace = @necklace
     @rental.user = current_user
