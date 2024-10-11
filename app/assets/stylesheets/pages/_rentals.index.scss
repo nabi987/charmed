@@ -1,7 +1,47 @@
 body{
   color:white;
 }
+.rent-card{
+  color: #fbfafa;
+}
 
+.delete-icon{
+position: absolute;
+top: 12px;
+left: 12px;
+}
+
+.card {
+  overflow: hidden;
+  background: #000000;
+  border: 1px solid burlywood;
+  margin: 20px;
+  max-height: 600px;
+  padding: 10px;
+  position: relative;
+  transition: box-shadow 0.2s ease-in-out;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  width: 300px;
+
+  margin-bottom: 20px;
+  margin: 10px;
+
+  &:hover {
+    box-shadow: 0 0 15px #eaba70;
+    transform: scale(1.05);
+  }
+
+  img {
+  width: 100%;
+  height: 89%;
+  max-width: auto;
+  max-height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  }
+
+}
 h1{
   text-align: center;
 }
@@ -17,13 +57,7 @@ h1{
 
 }
 
-.card{
-  width: 300px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin-bottom: 20px;
-  margin: 10px;
 
-}
 
 .card-img{
   height: 300px;
